@@ -59,7 +59,7 @@ if st.button("Processar Dados JSON"):
             resumos_inicial = dados_inicial.get("resumos", [])
             for i in range(min(10, len(titulos_inicial), len(resumos_inicial))):
                 if resumos_inicial[i].strip():  # Verifica se o resumo não está vazio
-                    st.text_area(f"{titulos_inicial[i]} - Inicial", value=resumos_inicial[i], height=150, key=f"resumo_inicial_{i}")
+                    st.text_area(f"Resumo {i+1} - Inicial", value=resumos_inicial[i], height=150, key=f"resumo_inicial_{i}")
                     if st.button(f"Copiar Resumo {i+1} - Inicial", key=f"btn_resumo_inicial_{i}"):
                         st.write(f"Resumo {i+1} copiado para a área de transferência!")
 
@@ -75,7 +75,7 @@ if st.button("Processar Dados JSON"):
             resumos_contestacao = dados_contestacao.get("resumos", [])
             for i in range(min(10, len(titulos_contestacao), len(resumos_contestacao))):
                 if resumos_contestacao[i].strip():  # Verifica se o resumo não está vazio
-                    st.text_area(f"{titulos_contestacao[i]} - Contestação", value=resumos_contestacao[i], height=150, key=f"resumo_contestacao_{i}")
+                    st.text_area(f"Resumo {i+1} - Contestação", value=resumos_contestacao[i], height=150, key=f"resumo_contestacao_{i}")
                     if st.button(f"Copiar Resumo {i+1} - Contestação", key=f"btn_resumo_contestacao_{i}"):
                         st.write(f"Resumo {i+1} copiado para a área de transferência!")
 
